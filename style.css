@@ -1,0 +1,161 @@
+body {
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #ffffff;
+}
+.ToDo-List {
+    max-width: 430px;
+    width:80%;
+    border-radius: 1em;
+    font-family: 'Recursive', sans-serif;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff; 
+}
+.TO-DO_header {
+    height: 100px;
+    padding-bottom:20px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    
+  }
+  .header-content {
+    color: #ffffff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .date-number {
+    font-size: 56px;
+    margin-right: 5px;
+  }
+  .header-contentleft{
+      display:flex;
+      align-items: center;
+  }
+  
+.listwrapper {
+    padding-top:20px;
+    background-color: #ffffff;
+    
+}
+.ToDo-List footer{
+    margin:0;
+    padding: .7em 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: #fff;
+}
+
+.ToDo-List .do input[type=checkbox]{
+    position:absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ToDo-List .do label{
+    position: relative;
+    display:block;
+    background-color: #fff;
+    padding: .75em 1em;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+ .ToDo-List .do label:hover{
+     transform:translateX(-1em);
+ }
+ .ToDo-List .do label::before{
+     content:'';
+     display:inline-block;
+     width:24px;
+     height: 24px;
+     border:1px solid #cccccc;
+     border-radius: 30%;
+     vertical-align: middle;
+     margin-right: .5em;
+    }
+ .ToDo-List .do label::after {
+     content:'';
+     position:absolute;
+     left:0;
+     top:0;
+     bottom:0;
+     width:0;
+     background-color :#b621fe;
+     transition:.3s ease-in-out;
+     
+ }   
+ .ToDo-List .do label:hover::after{
+     width:5px;
+ }
+ .ToDo-List .do label i{
+     position: absolute;
+     left:.7em;
+     top:.25em;
+     font-size: 1.7em;
+     color:#b621fe;
+     opacity: 0;
+     transition: .3s ease-in-out;
+ }
+ .ToDo-List .do input[type=checkbox]:checked +label i{
+     opacity:1;
+ }
+ .ToDo-List .do label.label{
+     position:relative;
+     color: #2d3432;
+     transition: .3s ease-in-out;
+ }
+
+ .ToDo-List .do input[type=checkbox]:checked+label{
+     color:#b621fe;
+ }
+ .ToDo-List .do label.label::after{
+     content:'';
+     position:absolute;
+     left:0;
+     right:100%;
+     top:50%;
+     height:1px;
+     background-color: #aaaaaa;
+     transition: .3s ease-in-out;
+ }
+ .ToDo-List .do input[type=checkbox]:checked+label.label::after{
+     right:0;
+ }
+
+ input[type=date]{
+     outline:none;
+     border:none;
+     background: transparent;
+     color:#ffffff;
+     width:50px;
+ }
+ input[type=date]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-month-field{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    font-size: 20px;
+}
